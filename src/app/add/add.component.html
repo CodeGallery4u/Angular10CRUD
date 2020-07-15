@@ -1,0 +1,29 @@
+
+<form class="example-form" [formGroup]="contactForm">
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="Name">
+    <mat-error *ngIf="contactForm.get('Name')?.errors?.error"> {{ contactForm.get('Name')?.errors?.error }}</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>ContactNo</mat-label>
+    <input matInput formControlName="ContactNo">
+    <mat-error *ngIf="contactForm.get('ContactNo')?.errors?.error"> {{ contactForm.get('ContactNo')?.errors?.error }}</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="Email">
+    <mat-error *ngIf="contactForm.get('Email')?.errors?.error"> {{ contactForm.get('Email')?.errors?.error }}</mat-error>
+  </mat-form-field>
+
+</form>
+
+<button class="noOutlinebutton" mat-raised-button color="primary" [routerLink]="['/Dashboard']">
+  <mat-icon>keyboard_backspace</mat-icon>
+  </button> |
+  <button class="noOutlinebutton" mat-raised-button color="accent" [disabled]="contactForm.invalid" (click)="OnAddContact()">
+    <mat-icon>person_add</mat-icon>
+    Add Contact
+    </button>

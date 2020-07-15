@@ -15,3 +15,8 @@ background-color: #969595;
 .footer-font{
   color: black;
 }
+
+
+.noOutlinebutton:focus {
+  outline: none !important;
+}

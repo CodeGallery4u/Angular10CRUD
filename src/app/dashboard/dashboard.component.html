@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-1">
+    <button [matBadge]="ContactDetails.length" matBadgePosition="after" matBadgeColor="accent" class="noOutlinebutton" mat-raised-button
+      color="primary" [routerLink]="['/Add']">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="col-md-1">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search</mat-label>
+      <input matInput placeholder="Search Contact" (input)="SearchChanges(name.value)" #name>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+
+
+</div>
+
+<div class="row">
+
+  <ng-container *ngFor="let item of ContactDetails">
+    <div class="card" style="width: 18rem;     margin: 21px;"  *ngIf="item.Visibility">
+      <div class="card-body">
+        <h2>{{ item.name }}</h2>
+        <h4> {{ item.contactNo }}</h4>
+        <h4> {{ item.email }}</h4>
+        <button class="noOutlinebutton" mat-fab color="accent" aria-label="Example icon button with a delete icon" [routerLink]="['/Delete', item.id]">
+          <mat-icon>delete</mat-icon>
+        </button> |
+        <button class="noOutlinebutton" mat-fab color="accent" aria-label="Example icon button with a delete icon" [routerLink]="['/Update', item.id]">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+
+    </div>
+  </ng-container>
+
+
+
+
+</div>
+

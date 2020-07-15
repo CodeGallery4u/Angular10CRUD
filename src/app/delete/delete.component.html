@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem;     margin: 21px;">
+  <div class="card-body">
+    <h2>{{ selectedContactDetails.name }}</h2>
+    <h4> {{ selectedContactDetails.contactNo }}</h4>
+    <h4> {{ selectedContactDetails.email }}</h4>
+
+  </div>
+
+</div>
+
+
+<button class="noOutlinebutton" mat-raised-button color="primary" [routerLink]="['/Dashboard']">
+  <mat-icon>keyboard_backspace</mat-icon>
+</button> |
+
+<button class="noOutlinebutton" mat-raised-button color="warn"
+  (click)="OnDeleteContactConfirm()">
+  <mat-icon>delete</mat-icon>
+  Delete
+</button>
