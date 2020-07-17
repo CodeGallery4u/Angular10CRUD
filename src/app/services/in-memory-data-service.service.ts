@@ -10,10 +10,10 @@ export class InMemoryDataServiceService implements InMemoryDbService {
   constructor() { }
   createDb() {
     let contact = [
-      new ContactDetails(1, "SAfder", "+919860335406", "siddiquisafder@gmail.com"),
-      new ContactDetails(2, "SAM", "+919860335406", "siddiquisafder@gmail.com"),
-      new ContactDetails(3, "John", "+919860335406", "siddiquisafder@gmail.com"),
-      new ContactDetails(4, "Paul", "+919860335406", "siddiquisafder@gmail.com")
+      new ContactDetails(1, "SAfder", "+917848521450", "safder@gmail.com"),
+      new ContactDetails(2, "SAM", "+919999905556", "sam@gmail.com"),
+      new ContactDetails(3, "John", "+911234335458", "John@gmail.com"),
+      new ContactDetails(4, "Paul", "+919860385214", "poul@gmail.com")
     ];
     return {contact};
   }
